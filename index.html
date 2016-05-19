@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Ejemplo  Javascript JQuery"/>
+	<meta name="keywords" content="html5, css,javascript,unisangil"/>
+	<meta name="author" content="Oscar Olivos"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<title>Ejemplo JQuery</title>
+	<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#enviar").click(function(){
+
+				//cualquier cosa
+				//alert("Se presionó el Boton!!");
+				if($("#nombre").val() !="" && $("#edad").val() != ""){
+
+					//alert("Bienvenido "+ $("#nombre").val() + "\n Su edad es: "+$("#edad").val());
+					$("#rta").html("<h1>Bienvenido "+ $("#nombre").val() + "</br> Su edad es: "+$("#edad").val()+"</h1>");
+					$("#rta").addClass("estilo2");
+
+				}else{
+					//alert("Todos los campos son necesarios");
+					$("#rta").html("Todos los campos son necesarios");
+					$("#rta").addClass("estilo1");
+				}
+
+			});
+			
+			$("#borrar").click(function(){
+
+				$("#rta").html("");
+				$("#rta").removeClass("estilo1").removeClass("estilo2");
+				$("#nombre").val("");
+				$("#edad").val("");
+			});
+
+			/*
+			$("#nombre").click(function(){
+				alert("Se hizo Click en el input Nombre!!");
+
+			});
+			$("#nombre").keyup(function(){
+				//alert("Tecla presionada!!");
+				$("#edad").val($(this).val());
+			})*/
+
+		})
+
+
+	</script>
+
+
+</head>
+<body>
+	<section>
+		<form id="formulario">
+			<input type="text" id="nombre" placeholder="Ingrese su Nombre">
+			<input type="number" id="edad" placeholder="Ingrese Edad">
+			<button type="button" id="enviar">Enviar</button>
+			<button type="button" id="borrar">Borrar</button>
+		</form>
+		<div id="rta"></div>
+
+	</section>
+
+</body>
+</html>

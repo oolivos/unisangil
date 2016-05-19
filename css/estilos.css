@@ -1,0 +1,62 @@
+.estilo1{
+	background-color: red;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.estilo2{
+	background-color: green;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+body{
+	width: 90%;
+	margin: 0 auto;
+	
+}
+section{
+	text-align: center;
+	padding: 20px 0 20px 0;
+
+}
+
+input[type="text"], select{
+	width: 80%;
+	height: 40px;
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	font-size: 20px;
+	border: solid 1px #BDBDBD;
+}
+
+button{
+	width: 50%;
+	height: 60px;
+	border:solid 1px #BDBDBD;
+	border-radius: 8px;
+	background-color: #7401DF;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+table{
+	width: 100%;
+	text-align: center;
+	border-spacing: 0;
+	font-size: 20px;
+}
+table tr td {
+	border-bottom: solid 2px #BDBDBD;
+	padding: 3px 0 3px 0;
+
+}
+table tr th{
+	padding: 3px 0 3px 0;
+	font-size: 26px;
+	border-bottom: solid 2px #BDBDBD;
+}
+img {
+	width: 32px;
+}
