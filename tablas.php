@@ -43,11 +43,7 @@ $usuarios = $conexion->query("SELECT
 							success:function(data){
 								if(data.estado == 1){
 									alert(data.mensaje);
-									$("#nombre").val("");
-									$("#apellido").val("");
-									$("#ciudad").val("");
-									$("#id_usuario").val("");
-									$("#editar").val(0);
+									
 
 									var tr = $("#tabla").find("[value='"+data.id+"']");
 									//alert(tr.find("td").eq(0).html());
@@ -55,7 +51,7 @@ $usuarios = $conexion->query("SELECT
 									tr.find("td").eq(1).html(apellido);
 									tr.find("td").eq(2).html(ciudad);
 									tr.find("td").eq(3).html(id_ciudad);
-
+									limpiar()
 
 
 
@@ -159,7 +155,14 @@ $usuarios = $conexion->query("SELECT
 
 			});
 
-		})
+		});
+		function limpiar(){
+			$("#nombre").val("");
+			$("#apellido").val("");
+			$("#ciudad").val("");
+			$("#id_usuario").val("");
+			$("#editar").val(0);
+		}
 
 	</script>
 </head>
@@ -177,6 +180,7 @@ $usuarios = $conexion->query("SELECT
 				 <?php } ?>
 			</select>
 			<button id="agregar" type="submit">Agregar</button>
+			<button onclick="limpiar()" type="button">Cancelar</button>
 		</form>
 
 	</section>
